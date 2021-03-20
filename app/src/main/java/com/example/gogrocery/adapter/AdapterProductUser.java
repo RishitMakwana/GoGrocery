@@ -135,7 +135,7 @@ public class AdapterProductUser extends RecyclerView.Adapter<AdapterProductUser.
         String discountNote = modelProduct.getDiscountNote();
         String image = modelProduct.getProductIcon();
 
-        String price;
+        final String price;
         if(modelProduct.getDiscountAvailable().equals("true")){
             //product have discount
             price = modelProduct.getDiscountPrice();
@@ -206,12 +206,12 @@ public class AdapterProductUser extends RecyclerView.Adapter<AdapterProductUser.
             @Override
             public void onClick(View v) {
                 String title = titleTv.getText().toString().trim();
-                String priceEach = originalPriceTv.getText().toString().trim().replace("₹","");
-                String price = finalPriceTv.getText().toString().trim().replace("₹","");
+                String priceEach = price;
+                String totalPrice = finalPriceTv.getText().toString().trim().replace("₹","");
                 String quantity = quantityTv.getText().toString().trim();
 
                 //add to db(SQLite)
-                addToCart(productId, title, priceEach, price, quantity);
+                addToCart(productId, title, priceEach, totalPrice, quantity);
 
                 dialog.dismiss();
             }
