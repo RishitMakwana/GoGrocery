@@ -32,6 +32,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -193,10 +194,18 @@ public class MainSellerActivity extends AppCompatActivity {
                             String name = ""+ds.child("name").getValue();
                             String accountType = ""+ds.child("accountType").getValue();
                             String shopName = ""+ds.child("shopName").getValue();
+                            String profileImage = ""+ds.child("profileImage").getValue();
                             String email = ""+ds.child("email").getValue();
                             nameTv.setText(name+" ("+accountType+")");
                             shopNameTv.setText(shopName);
                             emailTv.setText(email);
+
+                            try{
+                                Picasso.get().load(profileImage).placeholder(R.drawable.ic_person_gray).into(profileIv);
+                            }
+                            catch (Exception e){
+                                profileIv.setImageResource(R.drawable.ic_person_gray);
+                            }
                         }
                     }
 

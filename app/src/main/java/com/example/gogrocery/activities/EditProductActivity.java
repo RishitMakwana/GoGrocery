@@ -328,7 +328,7 @@ public class EditProductActivity extends AppCompatActivity {
 
                                 //update to db
                                 DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users");
-                                reference.child(firebaseAuth.getUid()).child("Products").child(productId)
+                                reference.child(firebaseAuth.getUid()).child("products").child(productId)
                                         .updateChildren(hashMap)
                                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                                             @Override

@@ -161,7 +161,7 @@ public class MainUserActivity extends AppCompatActivity {
                             String accountType = ""+ds.child("accountType").getValue();
                             String city = ""+ds.child("city").getValue();
 
-                            nameTv.setText(name);
+                            nameTv.setText(name+" ("+accountType+")");
                             emailTv.setText(email);
                             phoneTv.setText(phone);
                             try{

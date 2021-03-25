@@ -115,6 +115,13 @@ public class ProfileEditUserActivity extends AppCompatActivity implements Locati
 
             }
         });
+        profileIv.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                //pick image
+                showImagePickDialog();
+            }
+        });
         gpsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -218,6 +225,7 @@ public class ProfileEditUserActivity extends AppCompatActivity implements Locati
                                 hashMap.put("address", "" + address);
                                 hashMap.put("latitude", "" + latitude);
                                 hashMap.put("longitude", "" + longitude);
+                                hashMap.put("profileImage", "" + downloadImageUri);
 
                                 //update to db
                                 DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users");
