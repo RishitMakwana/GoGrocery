@@ -223,7 +223,7 @@ public class ShopDetailsActivity extends AppCompatActivity {
                 .addColumn(new Column("Item_Quantity", new String[]{"text","not null"}))
                 .doneTableColumn();
 
-        //get all records frome db
+        //get all records from db
         Cursor res = easyDB.getAllData();
         while (res.moveToNext())
         {
