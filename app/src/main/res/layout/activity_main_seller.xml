@@ -46,6 +46,15 @@
             android:src="@drawable/ic_add_shopping_white"
             android:layout_toStartOf="@id/editProfileBtn"
             android:background="@null"/>
+        
+        <ImageButton
+            android:id="@+id/reviewsBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_star_white"
+            android:layout_toStartOf="@id/addProductBtn"
+            android:background="@null"/>
+
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profileIv"
@@ -114,6 +123,7 @@
 
     <!--products-->
     <RelativeLayout
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/productsRl"
@@ -173,6 +183,36 @@
         android:layout_height="match_parent"
         android:id="@+id/ordersRl"
         android:layout_below="@+id/toolbarRl">
-
+        <!--searchFilter-->
+        <TextView
+            android:id="@+id/filteredOrdersTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_toStartOf="@id/filterOrderBtn"
+            android:background="@drawable/shape_rect02"
+            android:padding="10dp"
+            android:text="Showing All Orders"/>
+        <!--searchFilter-->
+        <ImageButton
+            android:id="@+id/filterOrderBtn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_filter_gray"/>
+        <!--show orders-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ordersRv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/filteredOrdersTv"
+            app:reverseLayout="true"
+            tools:listitem="@layout/row_order_seller"
+            app:stackFromEnd="true"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
     </RelativeLayout>
 </RelativeLayout>

@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.gogrocery.FilterProductUser;
 import com.example.gogrocery.R;
+import com.example.gogrocery.activities.ShopDetailsActivity;
 import com.example.gogrocery.models.ModelProduct;
 import com.squareup.picasso.Picasso;
 
@@ -241,6 +242,9 @@ public class AdapterProductUser extends RecyclerView.Adapter<AdapterProductUser.
                 .doneDataAdding();
 
         Toast.makeText(context, "Added to cart...", Toast.LENGTH_SHORT).show();
+
+        //update cart count
+        ((ShopDetailsActivity)context).cartCount();
     }
 
     @Override

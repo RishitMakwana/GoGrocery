@@ -15,7 +15,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GoGrocery">
-        <activity android:name=".activities.LoginActivity"></activity>
+        <activity android:name=".activities.ShopReviewsActivity"></activity>
+        <activity android:name=".activities.WriteReviewActivity" />
+        <activity android:name=".activities.OrderDetailsSellerActivity" />
+        <activity android:name=".activities.OrderDetailsUsersActivity" />
+        <activity android:name=".activities.LoginActivity" />
         <activity android:name=".activities.ForgotPasswordActivity" />
         <activity android:name=".activities.RegisterUserActivity" />
         <activity android:name=".activities.RegisterSellerActivity" />
@@ -26,14 +30,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.EditProductActivity"/>
+        <activity android:name=".activities.EditProductActivity" />
         <activity android:name=".activities.AddProductActivity" />
         <activity android:name=".activities.MainSellerActivity" />
         <activity android:name=".activities.MainUserActivity" />
         <activity android:name=".activities.ProfileEditUserActivity" />
         <activity android:name=".activities.ProfileEditSellerActivity" />
-        <activity android:name=".activities.ShopDetailsActivity"
-            android:windowSoftInputMode="stateHidden"/><!--hide keyboard by default-->
+        <activity
+            android:name=".activities.ShopDetailsActivity"
+            android:windowSoftInputMode="stateHidden" />
     </application>
 
 </manifest>

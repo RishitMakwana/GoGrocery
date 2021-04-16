@@ -27,7 +27,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="48dp"
             android:padding="10dp">
 
             <TextView
@@ -85,6 +85,18 @@
                 android:layout_below="@+id/openCloseTv"
                 android:layout_alignParentRight="true" />
 
+            <!--Ratingbar: show avg rating-->
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/deliveryFeeTv"
+                android:layout_alignParentEnd="true"
+                android:numStars="5"
+                android:progressBackgroundTint="@color/colorGray00"
+                android:progressTint="@color/colorWhite"/>
+
             <TextView
                 android:id="@+id/addressTv"
                 android:layout_width="wrap_content"
@@ -139,7 +151,10 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:background="@null"
-            android:src="@drawable/ic_cart_gray"/>
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_cart_gray"
+            android:tint="@color/colorWhite" />
+
 
         <ImageButton
             android:id="@+id/backBtn"
@@ -156,6 +171,28 @@
             android:text="Shop Details"
             android:textColor="@color/colorWhite"
             android:textSize="20sp"/>
+
+        <!--cart item count badge-->
+        <TextView
+            android:id="@+id/cartCountTv"
+            android:textColor="@color/colorWhite"
+            android:text="10"
+            android:textSize="8sp"
+            android:gravity="center"
+            android:background="@drawable/shape__circle03"
+            android:layout_alignParentEnd="true"
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
+
+        <!--show shop reviews-->
+        <ImageButton
+            android:id="@+id/reviewsBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_toStartOf="@id/cartBtn"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_star_white"
+            android:background="@android:color/transparent" />
 
     </RelativeLayout>
 
@@ -218,5 +255,4 @@
 
 
     </RelativeLayout>
-
 </RelativeLayout>
