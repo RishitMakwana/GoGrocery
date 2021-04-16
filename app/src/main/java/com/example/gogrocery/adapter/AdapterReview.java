@@ -84,7 +84,7 @@ public class AdapterReview extends RecyclerView.Adapter<AdapterReview.HolderRevi
                 catch (Exception e)
                 {
                     //if anything goes wrong setting image(exception occurs),set default image
-                    holder.profileIv.setImageResource(R.drawable.ic_store_gray);
+                    holder.profileIv.setImageResource(R.drawable.ic_person_gray);
                 }
             }
 
