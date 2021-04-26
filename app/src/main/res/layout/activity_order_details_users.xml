@@ -198,6 +198,20 @@
                     android:textColor="@color/colorBlack" />
             </TableRow>
 
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:textStyle="bold"
+                    android:text="Dear customer, If you do not receive the delivery within 24 hours please contact shop owner"
+                    android:textColor="@color/colorRed" />
+
+
         </TableLayout>
 
     </androidx.cardview.widget.CardView>

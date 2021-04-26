@@ -189,6 +189,7 @@
             android:id="@+id/reviewsBtn"
             android:layout_width="30dp"
             android:layout_height="30dp"
+            android:paddingTop="8dp"
             android:layout_toStartOf="@id/cartBtn"
             android:layout_centerVertical="true"
             android:src="@drawable/ic_star_white"

@@ -388,7 +388,7 @@ public class ShopDetailsActivity extends AppCompatActivity {
         final HashMap<String, String> hashMap = new HashMap<>();
         hashMap.put("orderId", "" + timestamp);
         hashMap.put("orderTime", "" + timestamp);
-        hashMap.put("orderStatus", "Completed");//in progress/completed/cancelled
+        hashMap.put("orderStatus", "In Progress");//in progress/completed/cancelled
         hashMap.put("orderCost", "" + cost);
         hashMap.put("orderBy", "" + firebaseAuth.getUid());
         hashMap.put("orderTo", "" + shopUid);
