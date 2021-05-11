@@ -67,7 +67,6 @@ public class WriteReviewActivity extends AppCompatActivity {
         //if user has written review to this shop, load it
         loadMyReview();
 
-
         //go back to previous activity
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
