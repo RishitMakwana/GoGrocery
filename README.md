@@ -1,0 +1,2 @@
+# GoGrocery
+Go Grocery is an online grocery store in which a customer has to submit online orders for items from a store that serves customers. The online Store system presents an online display of all the items they want to sell. This app includes the local stores so customers are independent to select the store of their choice and place their order. With grocery delivery, you can stay home and have someone bring your groceries right to your doorstep.
